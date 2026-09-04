@@ -1,0 +1,3158 @@
+{
+ "exam_code": "AIF-C01",
+ "language": "es",
+ "domain": "D2_generative_ai",
+ "weight_percent": 24,
+ "total_questions": 93,
+ "questions": [
+  {
+   "id": 310,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una inmobiliaria necesita miles de descripciones de pisos al día, todas con el mismo tono y bien redactadas. ¿Qué familia de modelos genera mejor ese texto largo y coherente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Autoencoders variacionales (VAE)"
+    },
+    {
+     "key": "B",
+     "text": "Modelos de difusión"
+    },
+    {
+     "key": "C",
+     "text": "Modelos basados en transformers"
+    },
+    {
+     "key": "D",
+     "text": "Redes adversariales (GAN)"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Los transformers producen texto largo con estilo controlado a escala. Difusión y GAN brillan en imagen; VAE en representación latente.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 437,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un chatbot de soporte en Bedrock factura cada mes más con los mismos usuarios: cada turno reenvía todo el historial en el prompt. ¿Qué regla de precios lo explica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se cobra por llamada, da igual el tamaño"
+    },
+    {
+     "key": "B",
+     "text": "Se cobra por tokens de entrada y salida de cada petición"
+    },
+    {
+     "key": "C",
+     "text": "Se cobra solo por la latencia"
+    },
+    {
+     "key": "D",
+     "text": "Se cobra por usuarios conectados"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Cada token cuenta: historiales largos inflan la entrada en cada turno aunque no crezcan los usuarios.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 383,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una logística quiere un agente que consulte stock, reserve envíos y emita guías llamando a APIs externas, sin rediseñar el modelo base. ¿Qué capacidad le da esas acciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Memoria a largo plazo del agente"
+    },
+    {
+     "key": "B",
+     "text": "Uso de herramientas (tool calling) hacia APIs"
+    },
+    {
+     "key": "C",
+     "text": "Fine-tuning con todos los catálogos"
+    },
+    {
+     "key": "D",
+     "text": "Caché de prompts antiguos"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Tool calling ejecuta acciones fuera del modelo sin reentrenar. Memoria y caché ayudan al contexto; fine-tuning es caro e innecesario aquí.",
+   "review_modules": [
+    "M06",
+    "M05"
+   ]
+  },
+  {
+   "id": 341,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una startup sin equipo de ML quiere su app generativa sin entrenar FMs desde cero. ¿Qué ventaja le dan los servicios GenAI de AWS?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Todo sale gratis en producción"
+    },
+    {
+     "key": "B",
+     "text": "Precisión del 100% garantizada"
+    },
+    {
+     "key": "C",
+     "text": "Bajan la barrera: FMs listos e infra gestionada"
+    },
+    {
+     "key": "D",
+     "text": "Ya no hay que programar nada"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Bedrock y cía. entregan modelos e infra por API. Ni gratis, ni perfectos, ni sin código.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 80,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Una aseguradora orquesta con Agents for Bedrock verificar póliza, ver estado del siniestro y responder. ¿Qué aporta el agente frente a un FM con prompt fijo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Crea FMs a medida que predicen clientes"
+    },
+    {
+     "key": "B",
+     "text": "Elige el FM por rankings públicos"
+    },
+    {
+     "key": "C",
+     "text": "Automatiza flujos multi-paso usando herramientas"
+    },
+    {
+     "key": "D",
+     "text": "Fusiona varios FMs por votación"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "El agente encadena pasos y llama herramientas; el prompt fijo solo responde una vez.",
+   "review_modules": [
+    "M05",
+    "M06"
+   ]
+  },
+  {
+   "id": 197,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una app edtech recibe la foto de un ejercicio o una pregunta escrita y devuelve la explicación paso a paso. ¿Qué modelo la mueve?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Solo visión sin generar texto"
+    },
+    {
+     "key": "B",
+     "text": "Difusión para sintetizar imágenes"
+    },
+    {
+     "key": "C",
+     "text": "Modelo de lenguaje multimodal grande"
+    },
+    {
+     "key": "D",
+     "text": "Texto a voz sin ver imágenes"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Multimodal: entra imagen+texto, sale explicación escrita. Las demás cubren solo media tarea.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 334,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Para estimar costos de Bedrock hay que entender su unidad de medida. En GenAI, ¿qué es un token?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un control de seguridad perimetral"
+    },
+    {
+     "key": "B",
+     "text": "Una arquitectura neuronal"
+    },
+    {
+     "key": "C",
+     "text": "El trozo mínimo de texto que el modelo lee y genera"
+    },
+    {
+     "key": "D",
+     "text": "Una métrica de exactitud"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Palabras o subpalabras: con ellas se mide precio y contexto. No es seguridad ni métrica.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 293,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Comparan un antifraude que clasifica con un redactor que crea informes desde datos. ¿Qué distingue discriminativos de generativos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los discriminativos siempre corren más rápido"
+    },
+    {
+     "key": "B",
+     "text": "Los discriminativos siempre aciertan más"
+    },
+    {
+     "key": "C",
+     "text": "Unos etiquetan; los otros crean contenido nuevo"
+    },
+    {
+     "key": "D",
+     "text": "Unos piden siempre más datos"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Clasificar vs. crear: esa es la frontera. Velocidad o datos no la definen.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 10,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Sensores agrícolas IoT deben inferir en el propio dispositivo, rapidísimo y sin nube en cada predicción. ¿Qué despliegue conviene con menos operación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "LLMs gigantes sin comprimir en cada sensor"
+    },
+    {
+     "key": "B",
+     "text": "SLMs pequeños optimizados en local"
+    },
+    {
+     "key": "C",
+     "text": "Llamar a una API central de SLM"
+    },
+    {
+     "key": "D",
+     "text": "Llamar a una API central de LLM"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "SLM en borde = inferencia local sin red. LLMs no caben y las APIs meten latencia.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 337,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un bot de soporte cita políticas internas que no existen en ningún documento. ¿Cómo se llama ese fallo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Salida visual"
+    },
+    {
+     "key": "B",
+     "text": "Arquitectura del modelo"
+    },
+    {
+     "key": "C",
+     "text": "Alucinación: invento con pinta de hecho"
+    },
+    {
+     "key": "D",
+     "text": "Método de entrenamiento"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Alucinar = fabricar contenido creíble y falso. No es arquitectura ni entrenamiento.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 289,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un equipo quiere arrancar GenAI ya, con modelos preentrenados y plantillas desplegables en su cuenta. ¿Qué le da SageMaker JumpStart?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rebaja sola la factura on-demand de Bedrock"
+    },
+    {
+     "key": "B",
+     "text": "Catálogo de modelos y soluciones listas para desplegar"
+    },
+    {
+     "key": "C",
+     "text": "Ajuste automático de hiperparámetros"
+    },
+    {
+     "key": "D",
+     "text": "Etiquetado humano a escala"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "JumpStart = estantería de modelos y recetas desplegables. No fija precios ni etiqueta datos.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 180,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una empresa con reglas manuales para moderar comentarios quiere escalar a nuevas filiales casi sin reescribir. ¿Qué virtud GenAI aplica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Salidas idénticas bit a bit"
+    },
+    {
+     "key": "B",
+     "text": "Adaptabilidad a contextos nuevos con poco retrabajo"
+    },
+    {
+     "key": "C",
+     "text": "Menos sensibilidad a la entrada que las reglas"
+    },
+    {
+     "key": "D",
+     "text": "Explicabilidad total interna"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Generalizar sin reescribir reglas es la gracia. Ni determinismo total ni explicabilidad completa.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 168,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una revista pilota un redactor IA en Bedrock con poco tráfico y uso impredecible, buscando gastar lo mínimo sin reservar nada. ¿Qué elige?",
+   "options": [
+    {
+     "key": "A",
+     "text": "EC2 con GPU dedicada"
+    },
+    {
+     "key": "B",
+     "text": "Bedrock on-demand"
+    },
+    {
+     "key": "C",
+     "text": "Bedrock con throughput aprovisionado"
+    },
+    {
+     "key": "D",
+     "text": "Flota fija de JumpStart"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "On-demand cobra por uso real, sin compromiso. Reservar o flotas fijas sobran con tráfico bajo.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 339,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Dudan entre un clasificador estrecho o un modelo grande adaptable a resumen, Q&A y generación. ¿Qué es un foundation model?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Solo genera texto"
+    },
+    {
+     "key": "B",
+     "text": "Solo genera imágenes"
+    },
+    {
+     "key": "C",
+     "text": "Modelo grande preentrenado, adaptable a muchas tareas"
+    },
+    {
+     "key": "D",
+     "text": "Modelo que nunca necesitó datos"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Preentrenado a lo grande y adaptable por prompt, RAG o fine-tuning. Todo modelo necesitó datos.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 278,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un despacho necesita condensar contratos larguísimos en bullets para revisión rápida. ¿Qué técnica GenAI lo resuelve?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Regresión numérica"
+    },
+    {
+     "key": "B",
+     "text": "Resumen de documentos"
+    },
+    {
+     "key": "C",
+     "text": "Clustering sin narrativa"
+    },
+    {
+     "key": "D",
+     "text": "Clasificación binaria de riesgo"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Resumir = destilar lo esencial en texto corto. El resto no redacta extractos.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 138,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un call center quiere recomendar por ubicación con FMs, sin operar servidores de ML. ¿Qué servicio AWS encaja?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Macie"
+    },
+    {
+     "key": "B",
+     "text": "Bedrock"
+    },
+    {
+     "key": "C",
+     "text": "Textract"
+    },
+    {
+     "key": "D",
+     "text": "Transcribe"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Bedrock sirve FMs por API sin gestionar infra. Macie, Textract y Transcribe son PII, OCR y voz.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 714,
+   "domain": "D2_generative_ai",
+   "type": "matching",
+   "difficulty": "intermediate",
+   "prompt": "Une cada riesgo GenAI con su mitigación más directa.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fuga de datos en el prompt"
+    },
+    {
+     "key": "B",
+     "text": "Respuestas tóxicas"
+    },
+    {
+     "key": "C",
+     "text": "Factura disparada por tokens"
+    },
+    {
+     "key": "D",
+     "text": "Alucinaciones"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "RAG con citas verificables"
+    },
+    {
+     "key": "2",
+     "label": "Enmascarar y controlar accesos"
+    },
+    {
+     "key": "3",
+     "label": "Guardrails y filtros"
+    }
+   ],
+   "correct": [
+    "D",
+    "A",
+    "B"
+   ],
+   "explanation": "RAG ancla hechos, controles cuidan datos y Guardrails frena toxicidad. El costo se ataca con límites, no aquí.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 340,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Revisan el ciclo de vida de un FM de datos a producción. ¿Qué NO es etapa técnica de ese ciclo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fine-tuning"
+    },
+    {
+     "key": "B",
+     "text": "Marketing del producto"
+    },
+    {
+     "key": "C",
+     "text": "Preentrenamiento"
+    },
+    {
+     "key": "D",
+     "text": "Despliegue"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "El ciclo técnico va de datos a feedback en producción; marketing es negocio, no ML.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 158,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Buscan la arquitectura que capture dependencias lejanas dentro del prompt. ¿Qué define a los transformers?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Filtros convolucionales locales"
+    },
+    {
+     "key": "B",
+     "text": "Autoatención (self-attention) en paralelo"
+    },
+    {
+     "key": "C",
+     "text": "Solo texto, jamás otros datos"
+    },
+    {
+     "key": "D",
+     "text": "Procesar uno a uno en bucles"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Self-attention pondera todo el contexto a la vez. Convolución y recurrencia son otras familias; además hay transformers multimodales.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 298,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Comparan Nova en Bedrock buscando multimodal multilingüe y barato. ¿Qué modelo Nova conviene?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Nova Pro"
+    },
+    {
+     "key": "B",
+     "text": "Nova Lite"
+    },
+    {
+     "key": "C",
+     "text": "Nova Canvas"
+    },
+    {
+     "key": "D",
+     "text": "Nova Reel"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Lite es el multimodal económico y multilingüe. Pro es potente y caro; Canvas y Reel son imagen y video.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 32,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una agencia pequeña prototipa GenAI en Bedrock con poco presupuesto y sin ataduras. ¿Qué precio minimiza riesgo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Throughput con compromiso mensual"
+    },
+    {
+     "key": "B",
+     "text": "Personalización con entrenamiento continuo"
+    },
+    {
+     "key": "C",
+     "text": "On-demand por tokens usados"
+    },
+    {
+     "key": "D",
+     "text": "Spot EC2 para hospedar el FM"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "On-demand paga solo uso: ideal para prototipar. Compromisos y personalización fijan costo; Spot no es precio nativo de Bedrock.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 174,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un LLM ajustado en Bedrock servirá un tráfico estable y predecible por minuto. ¿Qué sale más rentable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "EC2 de cómputo propia"
+    },
+    {
+     "key": "B",
+     "text": "Provisioned Throughput en Bedrock"
+    },
+    {
+     "key": "C",
+     "text": "On-demand en Bedrock"
+    },
+    {
+     "key": "D",
+     "text": "Modelo en S3 servido por Lambda"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Tráfico plano y conocido = reservar capacidad sale más barato por petición que pagar por token.",
+   "review_modules": [
+    "M05",
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 439,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una startup sin infra de ML quiere lanzar GenAI rápido con Bedrock. ¿Qué ventaja pesa más?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Toca entrenar tu FM desde cero"
+    },
+    {
+     "key": "B",
+     "text": "Acceso gestionado a FMs sin GPUs ni clústeres"
+    },
+    {
+     "key": "C",
+     "text": "Hay que administrar GPUs propias"
+    },
+    {
+     "key": "D",
+     "text": "Solo para grandes enterprises"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "APIs gestionadas quitan GPUs e infra del camino. Nada de entrenar desde cero ni exclusividad enterprise.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 282,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Una tienda de moda recomienda con GenAI en Bedrock y quiere medir ventas directas, no engagement. ¿Qué métrica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Interacciones con el asistente"
+    },
+    {
+     "key": "B",
+     "text": "Sentimiento del feedback"
+    },
+    {
+     "key": "C",
+     "text": "Conversión a compra tras interactuar"
+    },
+    {
+     "key": "D",
+     "text": "Precisión NLU"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Conversión ata interacción con compra. Uso, sentimiento o NLU no prueban caja.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 303,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una edtech ilustra cuentos infantiles desde descripciones de texto. ¿Qué solución genera esas imágenes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Polly para audiolibros"
+    },
+    {
+     "key": "B",
+     "text": "Rekognition para analizar fotos"
+    },
+    {
+     "key": "C",
+     "text": "Bedrock con difusión texto→imagen"
+    },
+    {
+     "key": "D",
+     "text": "Q Business para dibujar"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Texto→imagen lo hacen los difusores de Bedrock. Polly habla, Rekognition mira y Q Business asiste empresas.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 105,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "DevOps quiere que un LLM escriba scripts de infra desde comentarios en natural. ¿De qué capacidad depende?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Resumir texto"
+    },
+    {
+     "key": "B",
+     "text": "Clasificar texto"
+    },
+    {
+     "key": "C",
+     "text": "Generar texto nuevo"
+    },
+    {
+     "key": "D",
+     "text": "Completar medias frases"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Escribir scripts es crear contenido, o sea generación. Resumir o clasificar no escriben código.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 713,
+   "domain": "D2_generative_ai",
+   "type": "ordering",
+   "difficulty": "advanced",
+   "prompt": "Ordena estos patrones por latencia percibida, de menor a mayor.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Clasificador pequeño en borde"
+    },
+    {
+     "key": "B",
+     "text": "RAG con vectorial + LLM grande"
+    },
+    {
+     "key": "C",
+     "text": "Prompt corto a FM serverless"
+    },
+    {
+     "key": "D",
+     "text": "Agente multi-paso con herramientas en serie"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "1. Menor"
+    },
+    {
+     "key": "2",
+     "label": "2."
+    },
+    {
+     "key": "3",
+     "label": "3."
+    },
+    {
+     "key": "4",
+     "label": "4. Mayor"
+    }
+   ],
+   "correct": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "explanation": "Borde vuela; FM corto va luego; RAG suma búsqueda; el agente en serie acumula todo.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 55,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Una farma necesita datos sintéticos que imiten ensayos reales para pruebas internas. ¿Qué modelo genera esas muestras?",
+   "options": [
+    {
+     "key": "A",
+     "text": "XGBoost"
+    },
+    {
+     "key": "B",
+     "text": "WaveNet"
+    },
+    {
+     "key": "C",
+     "text": "GAN"
+    },
+    {
+     "key": "D",
+     "text": "ResNet"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Las GAN generan muestras realistas por duelo generador-discriminador. XGBoost y ResNet predicen; WaveNet es audio.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 275,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Una productora quiere crear clips con GenAI y recortar producción. ¿Qué vía es más eficiente operativamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Titan Image + edición manual"
+    },
+    {
+     "key": "B",
+     "text": "Nova Reel directo a video"
+    },
+    {
+     "key": "C",
+     "text": "Nova Canvas + edición manual"
+    },
+    {
+     "key": "D",
+     "text": "Nova Pro a video"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Reel genera video directo; armarlo desde imágenes añade pasos. Pro no es el modelo de video.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 450,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Una contable automatizó informes con GenAI y quiere saber si la inversión rindió. ¿Qué métrica lo mide?",
+   "options": [
+    {
+     "key": "A",
+     "text": "ROI"
+    },
+    {
+     "key": "B",
+     "text": "Accuracy del modelo"
+    },
+    {
+     "key": "C",
+     "text": "Parámetros del modelo"
+    },
+    {
+     "key": "D",
+     "text": "GB de entrenamiento"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "ROI cruza beneficio contra costo. Precisión o tamaño no hablan de dinero.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 50,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Ajustaron un modelo en Bedrock para resumir contratos. ¿Qué necesitan para invocarlo en producción?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Endpoint propio en SageMaker"
+    },
+    {
+     "key": "B",
+     "text": "Anotarlo en Model Registry y listo"
+    },
+    {
+     "key": "C",
+     "text": "Pedir acceso en consola"
+    },
+    {
+     "key": "D",
+     "text": "Provisioned Throughput dedicado"
+    }
+   ],
+   "correct": [
+    "D"
+   ],
+   "explanation": "Los custom de Bedrock se sirven con throughput reservado. Registry o consola no los ponen en línea.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 295,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Empleados preguntan en natural sobre políticas internas con control de accesos. ¿Para qué sirve Q Business?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entrenar modelos desde cero"
+    },
+    {
+     "key": "B",
+     "text": "Guardar data lakes"
+    },
+    {
+     "key": "C",
+     "text": "Asistente empresarial sobre datos de la compañía"
+    },
+    {
+     "key": "D",
+     "text": "Monitorear servidores"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Q Business responde sobre tus fuentes respetando permisos. No entrena, almacena ni monitoriza.",
+   "review_modules": [
+    "M06"
+   ]
+  },
+  {
+   "id": 302,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un LLM responde distinto a la misma entrada en cada ejecución. ¿Qué propiedad es?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Alucinación"
+    },
+    {
+     "key": "B",
+     "text": "No determinismo"
+    },
+    {
+     "key": "C",
+     "text": "Precisión"
+    },
+    {
+     "key": "D",
+     "text": "Multimodalidad"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Variar ante igual entrada = muestreo no determinista. Alucinar es inventar; el resto son otros conceptos.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 33,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un equipo quiere un FM rápido dentro de su VPC, con plantillas y modelos listos. ¿Qué opción AWS lo da?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Personalize"
+    },
+    {
+     "key": "B",
+     "text": "PartyRock"
+    },
+    {
+     "key": "C",
+     "text": "SageMaker JumpStart"
+    },
+    {
+     "key": "D",
+     "text": "Endpoint vacío de SageMaker"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "JumpStart despliega catálogo listo en tu cuenta. Personalize recomienda, PartyRock prototipa sin cuenta y un endpoint vacío no trae nada.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 382,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Necesitan operar agentes de IA en producción sin gestionar cómputo ni red. ¿Qué servicio con menos operación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bedrock AgentCore"
+    },
+    {
+     "key": "B",
+     "text": "SageMaker Canvas"
+    },
+    {
+     "key": "C",
+     "text": "Kendra"
+    },
+    {
+     "key": "D",
+     "text": "Polly"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "AgentCore es runtime gestionado de agentes. Canvas es no-code, Kendra busca y Polly habla.",
+   "review_modules": [
+    "M06",
+    "M05"
+   ]
+  },
+  {
+   "id": 342,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Mejoran un chatbot refinando instrucciones y ejemplos de entrada, sin reentrenar. ¿Qué práctica es?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Compresión del modelo"
+    },
+    {
+     "key": "B",
+     "text": "Prompt engineering"
+    },
+    {
+     "key": "C",
+     "text": "Diseño de arquitectura"
+    },
+    {
+     "key": "D",
+     "text": "Etiquetado supervisado"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Guiar con la entrada = prompting. No comprime, rediseña ni etiqueta.",
+   "review_modules": [
+    "M06",
+    "M04"
+   ]
+  },
+  {
+   "id": 375,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Un hospital quiere dictar notas clínicas por voz y que la IA las convierta en historiales estructurados. ¿Qué servicio AWS está pensado para eso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Q Developer"
+    },
+    {
+     "key": "B",
+     "text": "Polly"
+    },
+    {
+     "key": "C",
+     "text": "HealthScribe"
+    },
+    {
+     "key": "D",
+     "text": "Rekognition"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "HealthScribe transcribe voz clínica y genera notas. Q Developer programa, Polly habla y Rekognition ve imágenes.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 438,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un equipo usa un FM en Bedrock y quiere gastar menos sin cambiar de modelo. ¿Qué efecto tiene bajar el tope de tokens de salida?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sube el costo, igual latencia"
+    },
+    {
+     "key": "B",
+     "text": "Baja el costo y puede bajar la latencia"
+    },
+    {
+     "key": "C",
+     "text": "No cambia nada"
+    },
+    {
+     "key": "D",
+     "text": "Baja el costo pero sube la latencia"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Menos tokens generados = menos cobro y menos decodificación. No hay truco: generas menos, pagas menos.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 184,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Para un RAG hay que comparar textos por significado con matemáticas. ¿Qué aportan los embeddings?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Partir texto en chunks"
+    },
+    {
+     "key": "B",
+     "text": "Vectores comparables por similitud o distancia"
+    },
+    {
+     "key": "C",
+     "text": "Agrupar caracteres en un token"
+    },
+    {
+     "key": "D",
+     "text": "Contar palabras para facturar"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Embeddings = significado en vectores; la distancia mide parecido. Chunking y tokenizar son otros pasos.",
+   "review_modules": [
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 85,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Personalizaron un FM en Bedrock y deben subir el dataset de validación donde Bedrock lo espera. ¿Dónde?",
+   "options": [
+    {
+     "key": "A",
+     "text": "EBS atado a un EC2"
+    },
+    {
+     "key": "B",
+     "text": "Snowcone físico"
+    },
+    {
+     "key": "C",
+     "text": "S3"
+    },
+    {
+     "key": "D",
+     "text": "EFS de un notebook"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Bedrock integra datasets vía S3. EBS, EFS y Snowcone no son su puerta de entrada.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 379,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Una financiera reparte el trabajo entre agentes: uno mira cuentas, otro mueve transacciones, otro verifica compliance. ¿Qué patrón es, evitando un monolito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un solo agente generalista con RL"
+    },
+    {
+     "key": "B",
+     "text": "Sistema multiagente de especialistas que colaboran"
+    },
+    {
+     "key": "C",
+     "text": "Clasificador supervisado de tickets"
+    },
+    {
+     "key": "D",
+     "text": "Batch programado"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Multiagente = reparto y colaboración. Un generalista, un clasificador o un batch no orquestan así.",
+   "review_modules": [
+    "M06"
+   ]
+  },
+  {
+   "id": 715,
+   "domain": "D2_generative_ai",
+   "type": "ordering",
+   "difficulty": "basic",
+   "prompt": "Ordena de menor a mayor personalización del modelo a tu tarea.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fine-tuning con tus datos"
+    },
+    {
+     "key": "B",
+     "text": "Entrenar desde cero"
+    },
+    {
+     "key": "C",
+     "text": "Prompt zero-shot"
+    },
+    {
+     "key": "D",
+     "text": "Prompt few-shot"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "1. Menos"
+    },
+    {
+     "key": "2",
+     "label": "2."
+    },
+    {
+     "key": "3",
+     "label": "3."
+    },
+    {
+     "key": "4",
+     "label": "4. Más"
+    }
+   ],
+   "correct": [
+    "C",
+    "D",
+    "A",
+    "B"
+   ],
+   "explanation": "Sin ejemplos < con ejemplos < adaptar pesos < crear el modelo.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 353,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un medio quiere FMs hechos por Amazon para copy e imágenes. ¿Qué familia es first-party de AWS?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rekognition"
+    },
+    {
+     "key": "B",
+     "text": "Nova"
+    },
+    {
+     "key": "C",
+     "text": "Comprehend"
+    },
+    {
+     "key": "D",
+     "text": "Polly"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Nova = FMs de Amazon. Los demás son servicios aplicados (visión, NLP, voz).",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 460,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Empareja cada oferta GenAI con su rol: Bedrock, JumpStart, Q Business y PartyRock. ¿Qué mapeo vale?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bedrock→hub SageMaker; JumpStart→asistente; Q→playground; PartyRock→API"
+    },
+    {
+     "key": "B",
+     "text": "Bedrock→playground; JumpStart→asistente; Q→hub; PartyRock→API"
+    },
+    {
+     "key": "C",
+     "text": "Bedrock→API de FMs; JumpStart→catálogo SageMaker; Q Business→asistente empresarial; PartyRock→prototipos sin código"
+    },
+    {
+     "key": "D",
+     "text": "Bedrock→hub; JumpStart→API; Q→asistente; PartyRock→playground"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Bedrock sirve APIs, JumpStart despliega en SageMaker, Q Business asiste sobre tus datos y PartyRock prototipa sin cuenta.",
+   "review_modules": [
+    "M04",
+    "M05",
+    "M06"
+   ]
+  },
+  {
+   "id": 74,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Retail quiere gráficos de top ventas por tienda generados desde preguntas en natural. ¿Qué servicio AWS?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Q Developer"
+    },
+    {
+     "key": "B",
+     "text": "Q en QuickSight"
+    },
+    {
+     "key": "C",
+     "text": "Q en Chatbot"
+    },
+    {
+     "key": "D",
+     "text": "Q en EC2"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Q en QuickSight hace BI conversacional. Developer programa; los demás no grafican negocio.",
+   "review_modules": [
+    "M06"
+   ]
+  },
+  {
+   "id": 22,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una agencia lista posibles usos GenAI para una campaña. ¿Cuál lo es de verdad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "IDS de red"
+    },
+    {
+     "key": "B",
+     "text": "Pronóstico bursátil clásico"
+    },
+    {
+     "key": "C",
+     "text": "Imágenes fotorrealistas desde texto"
+    },
+    {
+     "key": "D",
+     "text": "Índices de base de datos"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Crear contenido nuevo desde texto = GenAI. Seguridad, forecasting e índices son otra cosa.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 23,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Eligen FM en Bedrock y necesitan saber cuánto texto cabe por prompt. ¿Qué propiedad manda?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Temperature"
+    },
+    {
+     "key": "B",
+     "text": "Tamaño en parámetros"
+    },
+    {
+     "key": "C",
+     "text": "Ventana de contexto"
+    },
+    {
+     "key": "D",
+     "text": "Batch size"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "La ventana limita tokens por petición. Temperature aleatoriza; parámetros y batch no acotan el prompt.",
+   "review_modules": [
+    "M05",
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 198,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Antes de producción hay que probar la calidad del modelo generativo. ¿Qué etapa valida desempeño?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Preentrenamiento"
+    },
+    {
+     "key": "B",
+     "text": "Fine-tuning"
+    },
+    {
+     "key": "C",
+     "text": "Evaluación"
+    },
+    {
+     "key": "D",
+     "text": "Despliegue"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Evaluar = medir antes de soltar a producción. Entrenar ajusta; desplegar expone.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 134,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un chatbot de suscripciones debe medirse en dinero, no en lingüística. ¿Qué métrica operativa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Consultas por día"
+    },
+    {
+     "key": "B",
+     "text": "Costo por conversación"
+    },
+    {
+     "key": "C",
+     "text": "Tiempo medio sin costo"
+    },
+    {
+     "key": "D",
+     "text": "Costo de entrenar una vez"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Costo por conversación une gasto y volumen, comparable con humanos. Conteos o capex no miden operación.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 377,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un bufete junta en una llamada pregunta, cláusulas recuperadas, normas internas e historial. ¿Qué disciplina ordena y prioriza ese contexto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fine-tuning"
+    },
+    {
+     "key": "B",
+     "text": "Ajuste de hiperparámetros"
+    },
+    {
+     "key": "C",
+     "text": "Ingeniería de contexto"
+    },
+    {
+     "key": "D",
+     "text": "Feature engineering"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Context engineering arma el contexto útil antes de invocar. El resto entrena o prepara variables.",
+   "review_modules": [
+    "M06",
+    "M05"
+   ]
+  },
+  {
+   "id": 193,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "basic",
+   "prompt": "Marca dos afirmaciones correctas sobre el espacio latente. (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Exige una base de datos especial"
+    },
+    {
+     "key": "B",
+     "text": "Guarda cómo relaciona conceptos el modelo"
+    },
+    {
+     "key": "C",
+     "text": "Solo vale para imágenes"
+    },
+    {
+     "key": "D",
+     "text": "Permite medir similitud semántica"
+    }
+   ],
+   "correct": [
+    "B",
+    "D"
+   ],
+   "explanation": "Latente = mapa interno de conceptos donde la cercanía es significado. No pide BD ni es solo visión.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 471,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una tienda generará descripciones de producto con IA. ¿Qué limitación debe asumir?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Puede sesgar o salirse de tono: requiere revisión humana"
+    },
+    {
+     "key": "B",
+     "text": "No habla otros idiomas"
+    },
+    {
+     "key": "C",
+     "text": "No entiende fichas de producto"
+    },
+    {
+     "key": "D",
+     "text": "No escala a catálogos grandes"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Sesgo y deslices exigen humano en el bucle. Idiomas, fichas vía contexto y escala sí los maneja.",
+   "review_modules": [
+    "M04",
+    "M08"
+   ]
+  },
+  {
+   "id": 472,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "intermediate",
+   "prompt": "Personalizar tu FM con datos propios en vez de usar uno listo: ¿qué dos pegas trae? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Más alucinaciones seguro"
+    },
+    {
+     "key": "B",
+     "text": "Peor exactitud seguro"
+    },
+    {
+     "key": "C",
+     "text": "Más costo"
+    },
+    {
+     "key": "D",
+     "text": "Más complejidad"
+    }
+   ],
+   "correct": [
+    "C",
+    "D"
+   ],
+   "explanation": "Cómputo, datos y operación cuestan y complican. No implica peor calidad: suele mejorar ajuste.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 712,
+   "domain": "D2_generative_ai",
+   "type": "matching",
+   "difficulty": "basic",
+   "prompt": "Une cada caso con su salida GenAI típica.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Detectar objetos en video"
+    },
+    {
+     "key": "B",
+     "text": "Chat de soporte"
+    },
+    {
+     "key": "C",
+     "text": "Crear imágenes"
+    },
+    {
+     "key": "D",
+     "text": "Resumir documentos"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "Texto→texto (LLM)"
+    },
+    {
+     "key": "2",
+     "label": "Texto→imagen"
+    },
+    {
+     "key": "3",
+     "label": "Diálogo multi-turno"
+    }
+   ],
+   "correct": [
+    "D",
+    "C",
+    "B"
+   ],
+   "explanation": "Resumen y chat son texto; imagen es difusión. Detectar objetos es visión clásica, no generativa.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 473,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué es un modelo fundacional en GenAI?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un esquema para diseñar redes"
+    },
+    {
+     "key": "B",
+     "text": "Un modelo estrecho de un sector"
+    },
+    {
+     "key": "C",
+     "text": "Un gigante preentrenado multi-tarea y adaptable"
+    },
+    {
+     "key": "D",
+     "text": "Una teoría de representaciones"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Grande, preentrenado amplio y adaptable por prompt o ajuste. Ni esquema ni nicho.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 474,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Una agencia de viajes sin gente de ML quiere fondos de marketing generados, sin alojar ni personalizar nada. ¿Qué servicio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Comprehend"
+    },
+    {
+     "key": "B",
+     "text": "Personalize"
+    },
+    {
+     "key": "C",
+     "text": "Bedrock"
+    },
+    {
+     "key": "D",
+     "text": "Rekognition"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Bedrock consume FMs (incluida imagen) por API sin infra. Comprehend lee, Personalize recomienda y Rekognition analiza.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 516,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Define token en un LLM.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Trozo mínimo de texto (palabra, subpalabra, símbolo)"
+    },
+    {
+     "key": "B",
+     "text": "Número de oraciones"
+    },
+    {
+     "key": "C",
+     "text": "Siempre una palabra"
+    },
+    {
+     "key": "D",
+     "text": "Peticiones en paralelo"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Unidad mínima de proceso; no equivale a palabra ni a frase.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 517,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué técnica mejora mates y problemas duros mostrando el razonamiento paso a paso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Few-shot"
+    },
+    {
+     "key": "B",
+     "text": "Plantillas"
+    },
+    {
+     "key": "C",
+     "text": "Cadena de pensamiento (CoT)"
+    },
+    {
+     "key": "D",
+     "text": "Prompt de sistema"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "CoT razona en voz alta y acierta más en lo complejo.",
+   "review_modules": [
+    "M06",
+    "M04"
+   ]
+  },
+  {
+   "id": 518,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué mecanismo crea imágenes desde texto partiendo de ruido y limpiándolo poco a poco?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Difusión"
+    },
+    {
+     "key": "B",
+     "text": "SVM"
+    },
+    {
+     "key": "C",
+     "text": "Árbol de decisión"
+    },
+    {
+     "key": "D",
+     "text": "Regresión logística"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Difusión = ruido→imagen por pasos. El resto clasifica, no genera.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 519,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Cómo se llama enseñar con ejemplos de entrada-salida dentro del prompt?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Few-shot"
+    },
+    {
+     "key": "B",
+     "text": "Fine-tuning"
+    },
+    {
+     "key": "C",
+     "text": "CoT"
+    },
+    {
+     "key": "D",
+     "text": "Zero-shot"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Few-shot muestra el patrón a imitar. Zero-shot va a pelo; fine-tuning toca pesos.",
+   "review_modules": [
+    "M06",
+    "M04"
+   ]
+  },
+  {
+   "id": 520,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Soporte recibe foto del producto + texto del defecto y debe responder usando ambas. ¿Qué modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Embeddings de texto"
+    },
+    {
+     "key": "B",
+     "text": "Series temporales"
+    },
+    {
+     "key": "C",
+     "text": "Multimodal"
+    },
+    {
+     "key": "D",
+     "text": "Dos LLMs de texto en serie"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Imagen+texto en una respuesta = multimodal. Lo demás ve medio input.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 521,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un acta larguísima no cabe en el contexto y da error. ¿Cómo resumirla sin cambiar de modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Resumir por partes y luego resumir los resúmenes"
+    },
+    {
+     "key": "B",
+     "text": "Bajar temperature y reintentar"
+    },
+    {
+     "key": "C",
+     "text": "Enviarlo varias veces y votar"
+    },
+    {
+     "key": "D",
+     "text": "Subir max tokens de salida"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Resumen jerárquico cabe en cualquier ventana. Max salida no agranda entrada; temperature no recorta.",
+   "review_modules": [
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 522,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué arquitectura sostiene a los LLMs actuales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "RNN"
+    },
+    {
+     "key": "B",
+     "text": "Transformer"
+    },
+    {
+     "key": "C",
+     "text": "Autoencoder"
+    },
+    {
+     "key": "D",
+     "text": "CNN"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "GPT, Claude, Nova: todos transformers con atención.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 523,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Cada petición repite un preámbulo enorme igual. ¿Cómo recortar espera y costo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Quitar el preámbulo"
+    },
+    {
+     "key": "B",
+     "text": "Cachear el preámbulo reutilizado"
+    },
+    {
+     "key": "C",
+     "text": "Más peticiones en paralelo"
+    },
+    {
+     "key": "D",
+     "text": "Subir temperature"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Prompt caching evita reprocesar lo repetido. Quitarlo cambia conducta; temperature no acelera.",
+   "review_modules": [
+    "M05",
+    "M04"
+   ]
+  },
+  {
+   "id": 524,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué sale con temperature baja (0.1)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Salida estable y coherente"
+    },
+    {
+     "key": "B",
+     "text": "Más velocidad"
+    },
+    {
+     "key": "C",
+     "text": "Más creatividad"
+    },
+    {
+     "key": "D",
+     "text": "Más tokens"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Baja = concentrada en lo probable. Alta = ruleta creativa.",
+   "review_modules": [
+    "M06",
+    "M04"
+   ]
+  },
+  {
+   "id": 710,
+   "domain": "D2_generative_ai",
+   "type": "ordering",
+   "difficulty": "intermediate",
+   "prompt": "Ordena por esfuerzo técnico adaptar un FM a tu soporte, de menor a mayor.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Continual pretraining masivo"
+    },
+    {
+     "key": "B",
+     "text": "Few-shot en el prompt"
+    },
+    {
+     "key": "C",
+     "text": "Fine-tuning con tickets"
+    },
+    {
+     "key": "D",
+     "text": "RAG interno"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "1. Menos"
+    },
+    {
+     "key": "2",
+     "label": "2."
+    },
+    {
+     "key": "3",
+     "label": "3."
+    },
+    {
+     "key": "4",
+     "label": "4. Más"
+    }
+   ],
+   "correct": [
+    "B",
+    "D",
+    "C",
+    "A"
+   ],
+   "explanation": "Prompt < RAG < reentrenar < preentrenar continuo.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 525,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Un Q&A interno debe mostrar documento y pasaje fuente de cada respuesta. ¿Qué arquitectura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Modelo más grande con más memoria"
+    },
+    {
+     "key": "B",
+     "text": "Temperature en 0"
+    },
+    {
+     "key": "C",
+     "text": "Pedirle que cite sin recuperar nada"
+    },
+    {
+     "key": "D",
+     "text": "Devolver los fragmentos RAG como citas"
+    }
+   ],
+   "correct": [
+    "D"
+   ],
+   "explanation": "Cita real = pasaje recuperado de verdad. Pedir citas sin RAG inventa fuentes.",
+   "review_modules": [
+    "M06"
+   ]
+  },
+  {
+   "id": 526,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Volumen alto y estable en Bedrock con desempeño parejo. ¿Qué modalidad conviene?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Evaluador de modelos"
+    },
+    {
+     "key": "B",
+     "text": "On-demand por token"
+    },
+    {
+     "key": "C",
+     "text": "Fine-tuning"
+    },
+    {
+     "key": "D",
+     "text": "Throughput aprovisionado"
+    }
+   ],
+   "correct": [
+    "D"
+   ],
+   "explanation": "Carga plana = reservar sale mejor que pagar por token.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 527,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Una paráfrasis correcta saca nota baja por decirlo distinto. ¿Cómo se compensa al evaluar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Medir tiempo de inferencia"
+    },
+    {
+     "key": "B",
+     "text": "Contar caracteres"
+    },
+    {
+     "key": "C",
+     "text": "Similitud semántica + juicio humano"
+    },
+    {
+     "key": "D",
+     "text": "Coincidencia literal más estricta"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Lo léxico castiga paráfrasis; semántica + humano lo corrige.",
+   "review_modules": [
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 528,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "¿Cuándo RAG y cuándo ajuste fino?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fino siempre mejor"
+    },
+    {
+     "key": "B",
+     "text": "Datos vivos→RAG; estilo propio→fino"
+    },
+    {
+     "key": "C",
+     "text": "RAG siempre más caro"
+    },
+    {
+     "key": "D",
+     "text": "Incompatibles entre sí"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "RAG bebe de fuera y se actualiza solo; fino interioriza conducta. Se combinan sin problema.",
+   "review_modules": [
+    "M06",
+    "M05"
+   ]
+  },
+  {
+   "id": 529,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Planificación quiere prototipar GenAI en navegador, sin código ni cuenta AWS. ¿Qué playground Bedrock?",
+   "options": [
+    {
+     "key": "A",
+     "text": "CloudShell"
+    },
+    {
+     "key": "B",
+     "text": "SageMaker Studio"
+    },
+    {
+     "key": "C",
+     "text": "PartyRock"
+    },
+    {
+     "key": "D",
+     "text": "Q Developer"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "PartyRock = prototipos en web sin cuenta. CloudShell es terminal; Studio y Developer piden más.",
+   "review_modules": [
+    "M06",
+    "M05"
+   ]
+  },
+  {
+   "id": 530,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Manual de 500K tokens, contexto de 200K. ¿Cómo responder sobre el manual?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El límite es flexible, cabe igual"
+    },
+    {
+     "key": "B",
+     "text": "RAG con los trozos relevantes"
+    },
+    {
+     "key": "C",
+     "text": "Meterlo todo y esperar magia"
+    },
+    {
+     "key": "D",
+     "text": "Pegarlo en el system prompt"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "La ventana es dura: solo cabe lo recuperado y relevante.",
+   "review_modules": [
+    "M06",
+    "M04"
+   ]
+  },
+  {
+   "id": 531,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Sin recursos para un modelo por tarea (texto, imagen, código): ¿qué enfoque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reglas a mano por tarea"
+    },
+    {
+     "key": "B",
+     "text": "Un FM adaptable por prompt o ajuste"
+    },
+    {
+     "key": "C",
+     "text": "Un árbol para todo"
+    },
+    {
+     "key": "D",
+     "text": "Mini-modelos desde cero"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Un FM cubre muchas tareas sin entrenar una legión. Reglas y arbolitos no llegan.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 564,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "App en producción recoge votos y fallos para la próxima mejora del FM. ¿Qué etapa del ciclo es?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Selección de datos"
+    },
+    {
+     "key": "B",
+     "text": "Preentrenamiento"
+    },
+    {
+     "key": "C",
+     "text": "Feedback"
+    },
+    {
+     "key": "D",
+     "text": "Selección de modelo"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Aprender de producción = retroalimentación al ciclo.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 565,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "¿Cuál es el orden del ciclo de vida de un FM?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Datos → modelo → pre-train → fine-tuning → evaluación → deploy → feedback"
+    },
+    {
+     "key": "B",
+     "text": "Deploy → pre-train → feedback → datos → evaluación → fino → modelo"
+    },
+    {
+     "key": "C",
+     "text": "Fino → modelo → deploy → datos → pre-train → feedback → evaluación"
+    },
+    {
+     "key": "D",
+     "text": "Evaluación → datos → deploy → pre-train → feedback → fino → modelo"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Datos, modelo, entrenar, ajustar, medir, soltar y aprender. En ese orden.",
+   "review_modules": [
+    "M04",
+    "M05"
+   ]
+  },
+  {
+   "id": 566,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "intermediate",
+   "prompt": "Chatbot con SLA duro y presupuesto fijo en Bedrock: ¿qué dos criterios mandan? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Latencia"
+    },
+    {
+     "key": "B",
+     "text": "Costo"
+    },
+    {
+     "key": "C",
+     "text": "Marca del modelo"
+    },
+    {
+     "key": "D",
+     "text": "Pasar de compliance"
+    }
+   ],
+   "correct": [
+    "A",
+    "B"
+   ],
+   "explanation": "SLA = latencia; techo de gasto = costo. Marca y saltarse compliance no son criterios.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 567,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Empareja cada modelo generativo con lo que produce.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Difusión: imagen · LLM: texto · Multi: varios · Embeddings: vectores"
+    },
+    {
+     "key": "B",
+     "text": "Difusión: audio · LLM: clusters · Multi: tablas · Embeddings: factura"
+    },
+    {
+     "key": "C",
+     "text": "Difusión: BBDD · LLM: redes · Multi: código · Embeddings: logs"
+    },
+    {
+     "key": "D",
+     "text": "Todo tabular"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Cada familia a lo suyo: imagen, texto, todo y vectores.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 711,
+   "domain": "D2_generative_ai",
+   "type": "matching",
+   "difficulty": "intermediate",
+   "prompt": "Une cada técnica GenAI con su objetivo.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Prompt engineering"
+    },
+    {
+     "key": "B",
+     "text": "RAG"
+    },
+    {
+     "key": "C",
+     "text": "Quantization"
+    },
+    {
+     "key": "D",
+     "text": "Batch"
+    },
+    {
+     "key": "E",
+     "text": "Fine-tuning"
+    }
+   ],
+   "slots": [
+    {
+     "key": "1",
+     "label": "Mejorar sin tocar pesos"
+    },
+    {
+     "key": "2",
+     "label": "Anclar en documentos vivos"
+    },
+    {
+     "key": "3",
+     "label": "Adaptar estilo con ejemplos"
+    }
+   ],
+   "correct": [
+    "A",
+    "B",
+    "E"
+   ],
+   "explanation": "Prompt no toca pesos, RAG trae contexto y fino adapta. Quantizar achica; batch es modo de corrida.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 568,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué es un FM, en corto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Solo tablas"
+    },
+    {
+     "key": "B",
+     "text": "Solo clusters"
+    },
+    {
+     "key": "C",
+     "text": "Hecho desde cero para una micro-tarea"
+    },
+    {
+     "key": "D",
+     "text": "Gigante preentrenado y multi-tarea"
+    }
+   ],
+   "correct": [
+    "D"
+   ],
+   "explanation": "Grande, general y adaptable: la definición de manual.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 569,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "basic",
+   "prompt": "¿Cuáles son usos GenAI? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Resumir texto"
+    },
+    {
+     "key": "B",
+     "text": "Generar código"
+    },
+    {
+     "key": "C",
+     "text": "Atornillar servidores"
+    },
+    {
+     "key": "D",
+     "text": "Compilar a mano"
+    }
+   ],
+   "correct": [
+    "A",
+    "B"
+   ],
+   "explanation": "Resumir y programar con IA = GenAI. Fierros y compilación manual no.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 570,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "¿Qué son los LLMs basados en transformers?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Clustering no supervisado"
+    },
+    {
+     "key": "B",
+     "text": "Bases vectoriales"
+    },
+    {
+     "key": "C",
+     "text": "Modelos que predicen la siguiente secuencia de tokens"
+    },
+    {
+     "key": "D",
+     "text": "Servicio de contenedores"
+    }
+   ],
+   "correct": [
+    "C"
+   ],
+   "explanation": "Predecir qué sigue, token a token: esa es su naturaleza.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 571,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Comparar cuánto se parecen dos políticas en significado, con números. ¿Qué representación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un token"
+    },
+    {
+     "key": "B",
+     "text": "Un embedding"
+    },
+    {
+     "key": "C",
+     "text": "La temperature"
+    },
+    {
+     "key": "D",
+     "text": "Los GB del checkpoint"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Vectores semánticos cuya cercanía es parecido. Tokens, temperatura y GB no miden significado.",
+   "review_modules": [
+    "M04"
+   ]
+  },
+  {
+   "id": 572,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "basic",
+   "prompt": "Define token, chunking, embedding y prompt engineering de una sentada.",
+   "options": [
+    {
+     "key": "A",
+     "text": "Token: trozo de texto · Chunk: partir docs · Embedding: vector · Prompting: diseñar instrucciones"
+    },
+    {
+     "key": "B",
+     "text": "Token: BBDD · Chunk: cifrado · Embedding: factura · Prompting: IAM"
+    },
+    {
+     "key": "C",
+     "text": "Token: imagen · Chunk: audio · Embedding: server · Prompting: DNS"
+    },
+    {
+     "key": "D",
+     "text": "Todo es fine-tuning"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "El cuarteto básico, cada uno en su casilla.",
+   "review_modules": [
+    "M04",
+    "M06"
+   ]
+  },
+  {
+   "id": 573,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Tráfico alto y estable 6+ meses en Bedrock, con mejor precio unitario. ¿Qué modalidad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "On-demand suelto"
+    },
+    {
+     "key": "B",
+     "text": "Throughput aprovisionado"
+    },
+    {
+     "key": "C",
+     "text": "Por usuario activo"
+    },
+    {
+     "key": "D",
+     "text": "S3 Intelligent-Tiering"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Compromiso temporal = capacidad dedicada más barata por unidad.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 574,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "SDK abierto y model-driven para agentes con herramientas, multi-proveedor. ¿Cuál de AWS?",
+   "options": [
+    {
+     "key": "A",
+     "text": "RDS Proxy"
+    },
+    {
+     "key": "B",
+     "text": "Strands Agents"
+    },
+    {
+     "key": "C",
+     "text": "Polly"
+    },
+    {
+     "key": "D",
+     "text": "Direct Connect"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Strands = agentes abiertos que corren en Bedrock y fuera. El resto es red, voz o BBDD.",
+   "review_modules": [
+    "M05",
+    "M06"
+   ]
+  },
+  {
+   "id": 575,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "FinOps mira factura on-demand de un LLM de texto. ¿Qué se cobra?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Horas EC2"
+    },
+    {
+     "key": "B",
+     "text": "Tokens in/out"
+    },
+    {
+     "key": "C",
+     "text": "Usuarios de consola"
+    },
+    {
+     "key": "D",
+     "text": "GB del modelo"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "Texto on-demand = tokens de entrada y salida. Nada de instancias ni GB.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 576,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Agente que toca CRM, tickets y KB sin casarse con un proveedor: buscan protocolo estándar de conexión. ¿Cuál?",
+   "options": [
+    {
+     "key": "A",
+     "text": "MCP"
+    },
+    {
+     "key": "B",
+     "text": "Base vectorial"
+    },
+    {
+     "key": "C",
+     "text": "Throughput reservado"
+    },
+    {
+     "key": "D",
+     "text": "SQS obligatorio"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "Model Context Protocol conecta agentes con sistemas externos de forma estándar.",
+   "review_modules": [
+    "M05",
+    "M06"
+   ]
+  },
+  {
+   "id": 577,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "advanced",
+   "prompt": "Del notebook a producción: agentes operados con seguridad y monitoreo, sin atarse a un framework. ¿Qué plataforma?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bedrock AgentCore"
+    },
+    {
+     "key": "B",
+     "text": "Comprehend Medical"
+    },
+    {
+     "key": "C",
+     "text": "Artifact"
+    },
+    {
+     "key": "D",
+     "text": "QuickSight"
+    }
+   ],
+   "correct": [
+    "A"
+   ],
+   "explanation": "AgentCore opera agentes a escala. Médico, certificados y dashboards no.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 578,
+   "domain": "D2_generative_ai",
+   "type": "single",
+   "difficulty": "intermediate",
+   "prompt": "Quieren FMs open source dentro de su cuenta SageMaker, no solo APIs. ¿Qué opción?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Polly"
+    },
+    {
+     "key": "B",
+     "text": "JumpStart"
+    },
+    {
+     "key": "C",
+     "text": "Config"
+    },
+    {
+     "key": "D",
+     "text": "Lex"
+    }
+   ],
+   "correct": [
+    "B"
+   ],
+   "explanation": "JumpStart despliega catálogo (incluido open) en tu SageMaker. Polly, Config y Lex son otra película.",
+   "review_modules": [
+    "M05",
+    "M07"
+   ]
+  },
+  {
+   "id": 579,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "advanced",
+   "prompt": "Stack de agentes productivos en AWS: ¿qué dos piezas encajan? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "AgentCore"
+    },
+    {
+     "key": "B",
+     "text": "Strands"
+    },
+    {
+     "key": "C",
+     "text": "Direct Connect razonando"
+    },
+    {
+     "key": "D",
+     "text": "RDS Proxy orquestando"
+    }
+   ],
+   "correct": [
+    "A",
+    "B"
+   ],
+   "explanation": "AgentCore + Strands = ecosistema de agentes. Red y proxy no razonan ni orquestan.",
+   "review_modules": [
+    "M05",
+    "M06"
+   ]
+  },
+  {
+   "id": 580,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "basic",
+   "prompt": "¿Qué dos beneficios da GenAI gestionado frente a montar fierros? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Salir antes al mercado"
+    },
+    {
+     "key": "B",
+     "text": "Olvidar el caso de negocio"
+    },
+    {
+     "key": "C",
+     "text": "Barrera de entrada baja"
+    },
+    {
+     "key": "D",
+     "text": "Cero errores garantizados"
+    }
+   ],
+   "correct": [
+    "A",
+    "C"
+   ],
+   "explanation": "Velocidad y accesibilidad. Ni excusa para no tener caso ni magia sin errores.",
+   "review_modules": [
+    "M05"
+   ]
+  },
+  {
+   "id": 581,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "intermediate",
+   "prompt": "Probar valor de negocio del asistente, no solo demos: ¿qué dos métricas? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Conversión"
+    },
+    {
+     "key": "B",
+     "text": "ROI"
+    },
+    {
+     "key": "C",
+     "text": "Parámetros"
+    },
+    {
+     "key": "D",
+     "text": "Bytes del checkpoint"
+    }
+   ],
+   "correct": [
+    "A",
+    "B"
+   ],
+   "explanation": "Conversión y ROI hablan dinero. Parámetros y bytes hablan fierros.",
+   "review_modules": [
+    "M03",
+    "M05"
+   ]
+  },
+  {
+   "id": 582,
+   "domain": "D2_generative_ai",
+   "type": "multiple",
+   "difficulty": "basic",
+   "prompt": "¿Qué dos ventajas da la infra AWS para GenAI? (Seleccione DOS.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "Seguridad"
+    },
+    {
+     "key": "B",
+     "text": "Adiós IAM para siempre"
+    },
+    {
+     "key": "C",
+     "text": "Latencia cero mundial"
+    },
+    {
+     "key": "D",
+     "text": "Compliance"
+    }
+   ],
+   "correct": [
+    "A",
+    "D"
+   ],
+   "explanation": "Seguridad y cumplimiento reales. IAM sigue existiendo y la latencia cero no.",
+   "review_modules": [
+    "M05",
+    "M09"
+   ]
+  }
+ ]
+}

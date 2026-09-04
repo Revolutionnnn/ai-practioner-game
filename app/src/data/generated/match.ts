@@ -1,0 +1,45 @@
+/* AUTO-GENERADO por scripts/import-d-bank.mjs — no editar a mano.
+   matching -> MatchCard (slot↔correct); opciones sobrantes -> decoys. */
+import type { MatchCard } from '../index';
+
+export const GENERATED_MATCH_CARDS: MatchCard[] = [
+  {"service":"Precision","use":"Cazar fraude sin alarmas falsas","hint":"Une cada métrica con su caso típico."},
+  {"service":"Recall","use":"No perder tumores en screening","hint":"Une cada métrica con su caso típico."},
+  {"service":"RMSE","use":"Medir error de demanda","hint":"Une cada métrica con su caso típico."},
+  {"service":"Supervisado","use":"Precio de casa con ventas etiquetadas","hint":"Une cada paradigma con su escenario."},
+  {"service":"No supervisado","use":"Clientes agrupados sin etiquetas","hint":"Une cada paradigma con su escenario."},
+  {"service":"Refuerzo","use":"Robot premiado por entregas","hint":"Une cada paradigma con su escenario."},
+  {"service":"Alucinaciones","use":"RAG con citas verificables","hint":"Une cada riesgo GenAI con su mitigación más directa."},
+  {"service":"Fuga de datos en el prompt","use":"Enmascarar y controlar accesos","hint":"Une cada riesgo GenAI con su mitigación más directa."},
+  {"service":"Respuestas tóxicas","use":"Guardrails y filtros","hint":"Une cada riesgo GenAI con su mitigación más directa."},
+  {"service":"Resumir documentos","use":"Texto→texto (LLM)","hint":"Une cada caso con su salida GenAI típica."},
+  {"service":"Crear imágenes","use":"Texto→imagen","hint":"Une cada caso con su salida GenAI típica."},
+  {"service":"Chat de soporte","use":"Diálogo multi-turno","hint":"Une cada caso con su salida GenAI típica."},
+  {"service":"Prompt engineering","use":"Mejorar sin tocar pesos","hint":"Une cada técnica GenAI con su objetivo."},
+  {"service":"RAG","use":"Anclar en documentos vivos","hint":"Une cada técnica GenAI con su objetivo."},
+  {"service":"Fine-tuning","use":"Adaptar estilo con ejemplos","hint":"Une cada técnica GenAI con su objetivo."},
+  {"service":"Embeddings + vectorial","use":"Indexar docs buscables","hint":"Une cada pieza RAG con su rol."},
+  {"service":"Retriever","use":"Elegir pasajes top","hint":"Une cada pieza RAG con su rol."},
+  {"service":"LLM generador","use":"Redactar con contexto","hint":"Une cada pieza RAG con su rol."},
+  {"service":"Planificar","use":"Armar pasos del ticket","hint":"Une cada capacidad de agente con su ejemplo."},
+  {"service":"Tool use","use":"Consultar stock por API","hint":"Une cada capacidad de agente con su ejemplo."},
+  {"service":"Memoria corta","use":"Recordar el chat actual","hint":"Une cada capacidad de agente con su ejemplo."},
+  {"service":"Agente con tools","use":"Calendarios y tickets Jira","hint":"Une problema con técnica FM adecuada."},
+  {"service":"Transparencia","use":"Avisar al usuario de que habla con un bot y qué datos se recogen","hint":"Une cada principio de IA responsable con su práctica correspondiente."},
+  {"service":"Equidad","use":"Comparar la tasa de error entre colectivos","hint":"Une cada principio de IA responsable con su práctica correspondiente."},
+  {"service":"Privacidad","use":"Quitar PII de logs y datasets","hint":"Une cada principio de IA responsable con su práctica correspondiente."},
+  {"service":"Sesgo heredado de los datos","use":"Auditar y balancear el dataset","hint":"Une cada fallo de IA responsable con su mitigación."},
+  {"service":"Caja negra ante el regulador","use":"Documentar modelo y decisiones (model card)","hint":"Une cada fallo de IA responsable con su mitigación."},
+  {"service":"Abuso del modelo por terceros","use":"Guardrails, límites y monitoreo","hint":"Une cada fallo de IA responsable con su mitigación."},
+  {"service":"Temas denegados","use":"Vetar charlas sobre fabricar armas","hint":"Une cada mecanismo de guardrail con su ejemplo de uso."},
+  {"service":"Filtros de palabras/frases","use":"Frenar insultos concretos en entrada y salida","hint":"Une cada mecanismo de guardrail con su ejemplo de uso."},
+  {"service":"Verificación de grounding","use":"Comprobar que la respuesta usa el documento recuperado","hint":"Une cada mecanismo de guardrail con su ejemplo de uso."},
+  {"service":"IAM mínimo para Bedrock","use":"Quién puede invocar el modelo","hint":"Une cada control de seguridad con su objetivo."},
+  {"service":"Cifrado en tránsito y reposo","use":"Proteger datos en movimiento y guardados","hint":"Une cada control de seguridad con su objetivo."},
+  {"service":"CloudTrail y logs","use":"Saber quién usó qué modelo y cuándo","hint":"Une cada control de seguridad con su objetivo."},
+  {"service":"Cuentas separadas con Organizations","use":"Separar dev y prod de GenAI","hint":"Une cada necesidad de gobernanza con su práctica AWS."},
+  {"service":"Tags + Cost Explorer","use":"Repartir gasto de inferencia por equipo","hint":"Une cada necesidad de gobernanza con su práctica AWS."},
+  {"service":"Guardrails en Bedrock","use":"Política de contenido del chatbot","hint":"Une cada necesidad de gobernanza con su práctica AWS."},
+];
+
+export const GENERATED_MATCH_DECOYS: string[] = ["Silhouette","BLEU","Semi-supervisado","Transferencia","Prompt sin entreno","Factura disparada por tokens","Detectar objetos en video","Quantization","Batch","Batch de SageMaker","Feature tabular","Clasificador offline","Compilar a TensorRT","PCA en embeddings","Escalado automático","Throughput de inferencia","Arranque en frío de una caché","Filtros de contenido (odio/violencia)","Throughput aprovisionado","CloudFront para imágenes","Spot para entrenar barato","Voces neuronales de Polly"];
